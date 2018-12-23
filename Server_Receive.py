@@ -2,11 +2,10 @@ import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-Name_Of_Local_Computer = socket.getfqdn(socket.gethostname())
-Local_IP_Address = socket.gethostbyname(Name_Of_Local_Computer)
-print("ServerIP: "+Local_IP_Address)
+print("ServerIP: "+socket.gethostbyname(socket.gethostname()))
 
-ServerIP = Local_IP_Address
+
+ServerIP = socket.getfqdn(socket.gethostname())
 
 ServerPort = 12000
 print("ServerPort: "+str(ServerPort)+".")
